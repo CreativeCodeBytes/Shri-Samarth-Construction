@@ -144,6 +144,8 @@
 
 
 
+
+        /* Contact Form */
         .contact-container {
             background-color: white;
             border-radius: 15px;
@@ -210,9 +212,48 @@
         .form-label {
             font-weight: bold;
         }
-
-
-    
+        .reach-us {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .reach-us-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        .reach-us-item:hover {
+            transform: translateX(10px);
+        }
+        .reach-us-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #ffc107;
+            transition: all 0.3s ease;
+        }
+        .reach-us-item:hover .reach-us-icon {
+            transform: scale(1.2);
+        }
+        .reach-us-text {
+            font-size: 16px;
+            color: #495057;
+        }
+        .reach-us-text a {
+            color: #495057;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .reach-us-text a:hover {
+            color: #ffc107;
+        }
+        #message {
+            resize: none;
+            overflow-y: auto;
+            min-height: calc(1.5em * 3);
+            max-height: calc(1.5em * 3);
+        }
 
 
 
@@ -339,7 +380,7 @@
               <a  class="nav-link active" aria-current="page" href="AboutUs.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a  class="nav-link active" aria-current="page" href="galary.html">Gallery</a>
+              <a  class="nav-link active" aria-current="page" href="Galary.html">Gallery</a>
             </li>
             <li class="nav-item">
               <a  class="nav-link active" aria-current="page" href="ContactUs.html">Contact Us</a>
@@ -368,33 +409,49 @@
 
 
 
-    <div class="container my-5">
-        <div class="row contact-container">
-            <div class="col-md-6 image-container"></div>
-            <div class="col-md-6 p-5">
-                <h2 class="mb-4 contact-title">Contact Us</h2>
-                <form id="contactForm">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="phone" class="form-label">Phone</label>
-                        <input type="tel" class="form-control" id="phone" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+  <div class="container my-5">
+    <div class="row contact-container">
+        <div class="col-md-6 image-container"></div>
+        <div class="col-md-6 p-5">
+            <div class="reach-us mb-5">
+                <h3 class="mb-4 contact-title">Reach Us At</h3>
+                <div class="reach-us-item">
+                    <i class="fas fa-map-marker-alt reach-us-icon"></i>
+                    <span class="reach-us-text">Beed bypass, Sambhaji Maharaj Square, Beed</span>
+                </div>
+                <div class="reach-us-item">
+                    <i class="fas fa-phone-alt reach-us-icon"></i>
+                    <span class="reach-us-text"><a href="tel:+11234567890">9422295192, 9730972384</a></span>
+                </div>
+                <div class="reach-us-item">
+                    <i class="fas fa-envelope reach-us-icon"></i>
+                    <span class="reach-us-text"><a href="mailto:shrisamarthconst1974@gmail.com">shrisamarthconst1974@gmail.com</a></span>
+                </div>
             </div>
+
+            <h2 class="mb-4 contact-title">Contact Us</h2>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
         </div>
     </div>
+</div>
 
 
 
@@ -412,15 +469,15 @@
                 <h4>Contact Us</h4>
                 <ul class="contact-info list-unstyled">
                     <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span> <a href="https://maps.app.goo.gl/jTg7JU2TZw89bvwF8">Beed bypass, Sambhaji Maharaj Square, Beed</a></span>
-                    </li>
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <strong>Phone:</strong><br>
-                            <a href="tel:9422295192">Manojkumar Pathak: 9422295192</a><br>
-                            <a href="tel:9730972384">Rushikesh Thigle: 9730972384</a>
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span> <a href="https://maps.app.goo.gl/jTg7JU2TZw89bvwF8">Beed bypass, Sambhaji Maharaj Square, Beed</a></span>
+                  </li>
+                  <li>
+                      <i class="fas fa-phone"></i>
+                      <div>
+                          <strong>Phone:</strong><br>
+                          <a href="tel:9422295192">Manojkumar Pathak: 9422295192</a><br>
+                          <a href="tel:9730972384">Rushikesh Thigle: 9730972384</a>
                         </div>
                     </li>
                     <li>
