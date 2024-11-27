@@ -1,20 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: linear-gradient(135deg, #eff0f1, #727373);
-  color: #000000;
-  min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
-  padding-top: 76px; /* Add padding to body to account for fixed navbar */
+  font-family: Arial, sans-serif;
 }
 
 /* Header and Navigation Styles */
 header {
   width: 100%;
-  position: fixed;
   top: 0;
-  left: 0;
   background-color: #333;
   padding: 15px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
   z-index: 1000;
 }
 
@@ -115,129 +116,118 @@ header {
   color: #ffcc00;
 }
 
-/* Main content styles */
-.main-content {
-  padding-top: 20px; /* Add padding to main content for extra space */
+.container {
+  position: relative;
+  height: 75%;
+  top: 3%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.85); /* Light background for readability */
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 800px; /* Limit width for centered look */
+  margin: auto; /* Center the container */
+  min-height: calc(100vh - 200px); /* Ensure space for footer */
 }
 
-.gallery-container {
-  background-color: rgba(220, 236, 48, 0.1);
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+/* Full-screen background image with an overlay */
+body {
+  background: url('Contact2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  top: 7%;
+  overflow: auto; /* Enable scrolling */
 }
 
-.gallery-item {
-  margin-bottom: 30px;
-  background-color: transparent;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 4px solid #767673;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-
-.gallery-item img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  filter: brightness(0.8);
-}
-
-@media (min-width: 992px) {
-  .gallery-item img {
-      height: 300px;
-  }
-}
-
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 1000;
+/* Dark overlay for better readability */
+body::before {
+  content: '';
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust alpha for darkness level */
+  z-index: 0;
 }
 
-.lightbox.active {
-  display: flex;
-}
-
-.lightbox-content {
+.container {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
+  z-index: 1;
+  background-color: rgba(4, 4, 4, 0.85); /* Light background to make content readable */
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(141, 137, 16, 0.925); /* Soft shadow for a professional look */
 }
 
-.lightbox-img {
-  max-width: 100%;
-  max-height: 90vh;
-  object-fit: contain;
+/* Optional: Smooth transition effect on background changes */
+body {
+  transition: background 0.5s ease-in-out;
 }
 
-.lightbox-close, .lightbox-prev, .lightbox-next {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+h4 {
+  font-size: 24px;
+  color: #f5efef; /* Darker color for a clean look */
+  font-weight: 600;
+}
+
+.form-label {
+  font-size: 16px;
+  color: #d59808; /* Subtle gray for labels */
+  font-weight: 500;
+}
+
+button.btn-primary {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #d59808; /* Bootstrap primary color */
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover {
-  background: rgba(255, 255, 255, 0.3);
+button.btn-primary:hover {
+  background-color: #42a00c; /* Darker shade on hover */
 }
 
-.lightbox-close {
-  top: 10px;
-  right: 10px;
+.bi {
+  color: #d59808; /* Match primary button color */
+  font-size: 20px; /* Increase size for visibility */
 }
 
-.lightbox-prev {
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+.contact-info p {
+  margin: 0;
+  padding-left: 8px; /* Spacing between icon and text */
+  color: #faf8f4;
 }
 
-.lightbox-next {
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.animated-title {
-  font-weight: 700;
-  color: #333;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-  text-decoration: underline;
-}
-
-@keyframes fadeInUp {
-  from {
-      opacity: 0;
-      transform: translateY(20px);
+@media (max-width: 786px) {
+  .container {
+      padding: 20px;
   }
-  to {
-      opacity: 1;
-      transform: translateY(0);
+
+  h4 {
+      font-size: 20px;
+  }
+
+  button.btn-primary {
+      font-size: 14px;
+      padding: 10px;
   }
 }
 
+/* Footer Styling Start */
 .footer {
+  position: relative;
+  top: 5%;
+  /*height: 100%;   */
   background: linear-gradient(45deg, #3e4e5e, #222);
   color: #fff;
   padding: 40px 0;
-  border-radius: 10px 10px 0 0;
 }
 
 .footer h4 {
@@ -341,27 +331,28 @@ header {
   margin-top: 5px;
 }
 
-.contact-info a {
-  display: inline-block;
+.contact-info {
+  margin-bottom: 20px;
 }
 
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-  body {
-      padding-top: 60px; /* Adjust padding for mobile */
-  }
-
-  .main-content {
-      padding-top: 10px; /* Reduce padding on mobile */
-  }
-
-  .gallery-container {
-      padding: 15px; /* Reduce padding on mobile */
-  }
-
-  .animated-title {
-      font-size: 24px; /* Reduce font size on mobile */
-      margin-bottom: 15px;
-  }
+.contact-info p {
+  margin: 0;
 }
 
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 15px;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff7f50;
+  transform: scale(1.2);
+}
+
+/* Footer Styling End */
