@@ -1,11 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e9ecef' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* Header and Navigation Styles */
@@ -25,6 +20,11 @@ header {
   padding: 10px;
 }
 
+.custom-navbar {
+  background-color: #333; /* Gray background for the navbar */
+  padding: 10px;
+}
+
 .custom-navbar .nav-link {
   color: white; /* White text color for nav links */
 }
@@ -39,6 +39,11 @@ header {
   background-color: yellow; /* Yellow color for the hamburger icon */
   border: 2px solid yellow; /* Add yellow border around the icon */
   border-radius: 5px; /* Optional: rounded corners */
+}
+
+.navbar-toggler-icon {
+  background-color: yellow; /* Change the hamburger icon color to yellow */
+  border: 2px solid yellow; /* Add border around the icon */
 }
 
 .custom-navbar .nav-link:hover {
@@ -79,9 +84,10 @@ header {
 .logo img {
   width: 50px;
   height: auto; /* Adjust size as needed */
+
 }
 
-.search-form {
+.search-form{
   width: 50%;
   position: absolute;
   top: 100%;
@@ -89,7 +95,7 @@ header {
   padding: 0.5rem;
 }
 
-.search-form input {
+.search-form input{
   width: 100%;
   padding: 2rem;
   border-radius: 10px;
@@ -116,243 +122,213 @@ header {
   color: #ffcc00;
 }
 
-.container {
-  position: relative;
-  height: 75%;
-  top: 3%;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.85); /* Light background for readability */
-  border-radius: 8px;
-  padding: 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  max-width: 800px; /* Limit width for centered look */
-  margin: auto; /* Center the container */
-  min-height: calc(100vh - 200px); /* Ensure space for footer */
+/* Contact Form */
+.content-container {
+  padding-top: 80px; /* Add space between navbar and content */
 }
 
-/* Full-screen background image with an overlay */
-body {
-  background: url('Contact2.jpg') no-repeat center center fixed;
+.contact-container {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease, border 0.3s ease;
+}
+.contact-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ffc107;
+}
+.form-control {
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+.form-control:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+.form-control:hover {
+  border-color: #ffc107;
+}
+.btn-primary {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #212529;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #e0a800;
+  border-color: #e0a800;
+  color: #212529;
+  transform: scale(1.05);
+}
+.image-container {
+  background-image: url(Contact-removebg.png);
   background-size: cover;
-  height: 100vh;
-  position: relative;
-  top: 7%;
-  overflow: auto; /* Enable scrolling */
+  background-position: center;
+  min-height: 300px;
 }
-
-/* Dark overlay for better readability */
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Adjust alpha for darkness level */
-  z-index: 0;
-}
-
-.container {
-  position: relative;
-  z-index: 1;
-  background-color: rgba(4, 4, 4, 0.85); /* Light background to make content readable */
-  border-radius: 8px;
-  padding: 30px;
-  max-width: 800px;
-  margin: auto;
-  box-shadow: 0 4px 12px rgba(141, 137, 16, 0.925); /* Soft shadow for a professional look */
-}
-
-/* Optional: Smooth transition effect on background changes */
-body {
-  transition: background 0.5s ease-in-out;
-}
-
-h4 {
-  font-size: 24px;
-  color: #f5efef; /* Darker color for a clean look */
-  font-weight: 600;
-}
-
-.form-label {
-  font-size: 16px;
-  color: #d59808; /* Subtle gray for labels */
-  font-weight: 500;
-}
-
-button.btn-primary {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  background-color: #d59808; /* Bootstrap primary color */
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-button.btn-primary:hover {
-  background-color: #42a00c; /* Darker shade on hover */
-}
-
-.bi {
-  color: #d59808; /* Match primary button color */
-  font-size: 20px; /* Increase size for visibility */
-}
-
-.contact-info p {
-  margin: 0;
-  padding-left: 8px; /* Spacing between icon and text */
-  color: #faf8f4;
-}
-
-@media (max-width: 786px) {
-  .container {
-      padding: 20px;
-  }
-
-  h4 {
-      font-size: 20px;
-  }
-
-  button.btn-primary {
-      font-size: 14px;
-      padding: 10px;
+@media (min-width: 768px) {
+  .image-container {
+      min-height: 100%;
   }
 }
-
-/* Footer Styling Start */
-.footer {
-  position: relative;
-  top: 5%;
-  /*height: 100%;   */
-  background: linear-gradient(45deg, #3e4e5e, #222);
-  color: #fff;
-  padding: 40px 0;
-}
-
-.footer h4 {
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.contact-title {
   position: relative;
   display: inline-block;
 }
-
-.footer h4::after {
+.contact-title::after {
   content: '';
   position: absolute;
-  width: 50%;
+  width: 0;
   height: 2px;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
-  background-color: #ff7f50;
-  transition: width 0.3s;
+  background-color: #ffc107;
+  transition: width 0.3s ease;
 }
-
-.footer h4:hover::after {
+.contact-title:hover::after {
   width: 100%;
 }
-
-.footer p, .footer li {
-  font-size: 16px;
-  line-height: 1.6;
+.form-label {
+  font-weight: bold;
 }
-
-.footer a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
+.reach-us {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
 }
-
-.footer a:hover {
-  color: #ff7f50;
+.reach-us-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
 }
-
-.social-icon {
+.reach-us-item:hover {
+  transform: translateX(10px);
+}
+.reach-us-icon {
   font-size: 24px;
   margin-right: 15px;
-  transition: transform 0.3s;
+  color: #ffc107;
+  transition: all 0.3s ease;
 }
-
-.social-icon:hover {
+.reach-us-item:hover .reach-us-icon {
   transform: scale(1.2);
 }
+.reach-us-text {
+  font-size: 16px;
+  color: #495057;
+}
+.reach-us-text a {
+  color: #495057;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.reach-us-text a:hover {
+  color: #ffc107;
+}
+#message {
+  resize: none;
+  overflow-y: auto;
+  min-height: calc(1.5em * 3);
+  max-height: calc(1.5em * 3);
+}
 
+/* Footer Styling Start  */
+
+.footer {
+background: linear-gradient(45deg, #3e4e5e, #222);
+color: #fff;
+padding: 40px 0;
+border-radius: 10px 10px 0 0;
+}
+.footer h4 {
+font-size: 20px;
+margin-bottom: 20px;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 1px;
+position: relative;
+display: inline-block;
+}
+.footer h4::after {
+content: '';
+position: absolute;
+width: 50%;
+height: 2px;
+bottom: -5px;
+left: 0;
+background-color: #ff7f50;
+transition: width 0.3s;
+}
+.footer h4:hover::after {
+width: 100%;
+}
+.footer p, .footer li {
+font-size: 16px;
+line-height: 1.6;
+}
+.footer a {
+color: #fff;
+text-decoration: none;
+transition: color 0.3s;
+}
+.footer a:hover {
+color: #ff7f50;
+}
+.social-icon {
+font-size: 24px;
+margin-right: 15px;
+transition: transform 0.3s;
+}
+.social-icon:hover {
+transform: scale(1.2);
+}
 .footer-bottom {
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 20px 0;
-  margin-top: 20px;
-  border-top: 2px solid #ff7f50;
+background-color: rgba(0, 0, 0, 0.2);
+padding: 20px 0;
+margin-top: 20px;
+border-top: 2px solid #ff7f50;
 }
-
 .footer-bottom p {
-  margin: 5px 0;
-  color: #aaa;
+margin: 5px 0;
+color: #aaa;
 }
-
 .footer-content > div {
-  transition: transform 0.3s ease-in-out, background-color 0.3s;
-  padding: 20px;
+transition: transform 0.3s ease-in-out, background-color 0.3s;
+padding: 20px;
 }
-
 .footer-content > div:hover {
-  transform: translateY(-5px);
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+transform: translateY(-5px);
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 8px;
 }
-
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
 }
-
 .footer-content > div {
-  animation: fadeIn 0.5s ease-out forwards;
+animation: fadeIn 0.5s ease-out forwards;
 }
-
 .footer-content > div:nth-child(1) { animation-delay: 0.1s; }
 .footer-content > div:nth-child(2) { animation-delay: 0.3s; }
 .footer-content > div:nth-child(3) { animation-delay: 0.5s; }
-
 .contact-info {
-  padding-left: 0;
+padding-left: 0;
 }
-
 .contact-info li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: flex-start;
+margin-bottom: 10px;
+display: flex;
+align-items: flex-start;
 }
-
 .contact-info i {
-  margin-right: 10px;
-  margin-top: 5px;
+margin-right: 10px;
+margin-top: 5px;
 }
-
-.contact-info {
-  margin-bottom: 20px;
+.contact-info a {
+display: inline-block;
 }
+/* Footer Css End */
 
-.contact-info p {
-  margin: 0;
-}
-
-.social-icons {
-  margin-top: 20px;
-}
-
-.social-icons a {
-  color: #fff;
-  font-size: 20px;
-  margin-right: 15px;
-  transition: transform 0.3s;
-}
-
-.social-icons a:hover {
-  color: #ff7f50;
-  transform: scale(1.2);
-}
-
-/* Footer Styling End */
